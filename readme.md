@@ -1,9 +1,29 @@
+## Запуск проекта
+
+- **Установка**:
+    ```bash
+    git clone https://github.com/grisha765/hh_responses_py.git && \
+    cd hh_responses_py/ && \
+    python -m venv .venv && \
+    .venv/bin/python -m pip install -r requirements.txt && \
+    ```
+
+- **Запуск**:
+    ```bash
+    .venv/bin/python main.py
+    ```
+    - Можно применить перемнные окружения.
+        - `export LOG_LEVEL='{INFO/DEBUG/WARNING/ERROR/CRITICAL}}'`: задать уровень логгирования.
+        - `export CHROME_PATH='/path/to/chromium'`: задать путь для chrome.ы
+
+## Дорожная карта
+
 ## Базовые настройки проекта
 - [x] Создать запускной файл проекта
   - Написать скрипт для запуска CLI интерфейса
 - [x] Создать структуру проекта
   - Организовать директории для модулей, конфигураций, логов и данных
-- [ ] Настроить окружение проекта
+- [x] Настроить окружение проекта
   - Создать и настроить виртуальное окружение
   - Установить необходимые зависимости (Playwright, Pyrofork и другие библиотеки)
 
