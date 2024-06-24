@@ -15,7 +15,7 @@
     - Можно применить перемнные окружения.
         - `LOG_LEVEL='{INFO/DEBUG/WARNING/ERROR/CRITICAL}}'`: задать уровень логгирования.
         - `CHROME_PATH='/path/to/chromium'`: задать путь для chrome.
-        - `HH_LOGIN='test@example.com'` и `HH_PASSW="password123"`
+        - `HH_LOGIN='test@example.com'` и `HH_PASSW="password123"`: задать логин и пароль.
     - Пример.
         ```bash
         LOG_LEVEL="DEBUG" .venv/bin/python main.py
