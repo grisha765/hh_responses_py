@@ -3,7 +3,9 @@ from scrap.start import prepare_page
 
 async def main():
     browser, page, playwright = await init_browser()
-    await prepare_page(page)
+    login = str(input("login: "))
+    password = str(input("password: "))
+    await prepare_page(page, login, password)
     await browser.close()
     await playwright.stop()
 
