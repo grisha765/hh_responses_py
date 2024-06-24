@@ -1,10 +1,12 @@
 import os
 
 class Config:
-    # Определяем значения по умолчанию
     chrome_path: str = '/bin/chromium'
     log_level: str = "INFO"
+    tests: str = "False"
     tgbot_pass: str = "123"
+    hh_login: str = "test@example.com"
+    hh_passw: str = "password123"
 
     @classmethod
     def load_from_env(cls):
@@ -16,7 +18,6 @@ class Config:
                 else:
                     setattr(cls, key, env_value)
 
-# Загружаем конфигурацию из переменных окружения
 Config.load_from_env()
 
 if __name__ == "__main__":
