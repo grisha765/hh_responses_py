@@ -1,5 +1,6 @@
 import asyncio
 from core.screenshot import take_screenshot
+from scrap.passwd import login_password
 from config.config import Config
 from config import logging_config
 logging = logging_config.setup_logging(__name__)
@@ -39,6 +40,8 @@ async def login_hh(page, login: str = Config.hh_login, password: str = Config.hh
     email_value = await page.get_attribute('input[data-qa="login-input-username"]', 'value')
     password_placeholder = await page.get_attribute('input[data-qa="login-input-password"]', 'placeholder')
     password_value = await page.get_attribute('input[data-qa="login-input-password"]', 'value')
+
+    await login_password(page)
 
     return {"Email Placeholder": f"{email_placeholder}",
             "Email Value": f"{email_value}",
