@@ -29,7 +29,6 @@ python3 -m venv .venv
     LOG_LEVEL='DEBUG'
     CHROME_PATH='/path/to/chromium'
     HH_LOGIN='test@example.com'
-    HH_PASSW='password123'
     TESTS='True'
     ```
 
