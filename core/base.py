@@ -4,10 +4,8 @@ from scrap.login import login_hh
 
 async def main():
     browser, page, playwright = await init_browser()
-    login = str(input("login: "))
-    password = str(input("password: "))
     await prepare_page(page)
-    await login_hh(page, login, password)
+    await login_hh(page)
     await browser.close()
     await playwright.stop()
 
